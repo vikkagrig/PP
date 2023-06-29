@@ -1,0 +1,57 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.Extensions.Caching.Memory;
+@using System.Text.RegularExpressions
+@using SimpleBlazorServerApp.Components
+@inject IMemoryCache MemoryCache
+ 
+<input type="password" @bind="pass" />
+<Item3 Password="@pass" Phone="@phone" />
+<h1>@message</h1>
+<h1>@message2</h1>
+<p><input @bind="@phone" /></p>
+<h2>@message3</h2>
+<input @bind="@message3" />
+<ul>
+    @foreach (var renderTime in renderTimes)
+    {
+        <li>@renderTime</li>
+    }
+</ul>
+ 
+@code {
+    
+}
+@code {
+    string pass = "";
+    string message = "";
+    protected override void OnInitialized()
+    {
+        message = $"App initialized at {DateTime.Now.ToLongTimeString()}";
+    }
+    string message2 = "";
+    static int counter;
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Delay(100);
+        if (MemoryCache.TryGetValue<int>("counter", out var value))
+        {
+            counter = value;
+        }
+        else
+        {
+            counter++;
+            MemoryCache.Set("counter", counter);
+        }
+        message2 = $"App counter =  {counter}";
+    }
+    string phone = "";
+    string message3 = "";
+    List<string> renderTimes = new();
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
+            renderTimes.Add($"First render time: {DateTime.Now.ToLongTimeString()}");
+        else
+            renderTimes.Add($"Rerender time: {DateTime.Now.ToLongTimeString()}");
+    }
+}

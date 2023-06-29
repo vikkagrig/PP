@@ -1,0 +1,53 @@
+﻿<link href="/css/styles.css" rel="stylesheet" type="text/css">
+@using Microsoft.AspNetCore.Components.Web
+
+@using SimpleBlazorServerApp.Components
+
+<Main Title="Input Age" @attributes="@Attributes"></Main>
+<Main Title="User Age" Max="45" Min="18" Placeholder="Input age2" />
+<Home Data="@data" />
+<Home Title="Home Page" />
+<Home Title="@someTitle" />
+<Home />
+<Home Count="@users.Count" Users="@users"></Home>
+<Home Title="Главная страница">
+    <div>
+        <h3>Отрывок</h3>
+        <p>Высокой страсти не имея</p>
+        <p>Для кода жизни не щадить,</p>
+        <p>Не мог он джаву от сишарпа</p>
+        <p>Как мы ни бились, отличить.</p>
+    </div>
+</Home>
+<h1>@Message @name</h1>
+<h2>@DisplayTime()</h2>
+<div>@html</div>
+<div>@((MarkupString)html)</div>
+<h3>Photo</h3>
+<button @onclick="Click">+</button>
+<span>@currentCount</span>
+<img alt="Forest" src="/images/photo.jpg" />
+
+@code {
+    string name = "Vika";
+    string DisplayTime()
+    {
+        return $"Current time: {DateTime.Now.ToString("HH:mm:ss")}";
+    }
+    string Message { get; } = "Hello";
+    string html = "<h1>Hello Metanit.com</h1>";
+    private int currentCount = 0;
+    private void Click() => currentCount++;
+    string someTitle = "Main Page";
+    List<string> users = new List<string> { "Tom", "Bob", "Sam", "Mike" };
+    Tuple<string, int, bool> data = new("Tom", 38, false);
+    public Dictionary<string, object> Attributes { get; set; } =
+        new Dictionary<string, object>()
+            {
+            {"type", "number" },
+            { "min", "1" },
+            { "max", "99" },
+            { "placeholder", "Input age" },
+            { "style", "width:150px;" }
+            };
+}

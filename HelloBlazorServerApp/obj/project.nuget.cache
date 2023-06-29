@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "C/xGNh530SSu8oI490/QRnAbt+OluqLNz3eKnC3l4uzbNjXK6L5EBicPlDLh5TAAKvt6MlQUht4XbhGO57cTXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Виктория Григорьева\\Desktop\\Study\\ПП\\HelloBlazorServerApp\\HelloBlazorServerApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.8\\microsoft.aspnetcore.authorization.7.0.8.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.8\\microsoft.aspnetcore.components.7.0.8.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\7.0.8\\microsoft.aspnetcore.components.analyzers.7.0.8.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.aspnetcore.metadata\\7.0.8\\microsoft.aspnetcore.metadata.7.0.8.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\microsoft.extensions.logging.abstractions.7.0.1.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
+    "C:\\Users\\Виктория Григорьева\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

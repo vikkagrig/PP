@@ -1,0 +1,29 @@
+﻿<h2>@Title</h2>
+<h2>Количество пользователей: @Count</h2>
+<ul>
+    @foreach (var user in Users)
+    {
+        <li>@user</li>
+    }
+</ul>
+<ul>
+    <li>Name: @Data?.Item1</li>
+    <li>Age: @Data?.Item2</li>
+    <li>IsMarried: @Data?.Item3</li>
+</ul>
+<div>@ChildContent</div>
+
+@code {
+    [EditorRequired]
+    [Parameter]
+    public string Title { get; set; } = "Default Title";
+    [Parameter]
+    public List<string> Users { get; set; } = new();
+
+    [Parameter]
+    public int Count { get; set; }
+    [Parameter]
+    public Tuple<string, int, bool>? Data { get; set; }
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

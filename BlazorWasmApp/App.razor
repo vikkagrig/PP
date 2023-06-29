@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+<h1>Hello METANIT.COM</h1>
+
+<button @onclick="Click">+</button>
+<span>@currentCount</span>
+
+@code {
+    private int currentCount = 0;
+    private void Click() => currentCount++;
+}

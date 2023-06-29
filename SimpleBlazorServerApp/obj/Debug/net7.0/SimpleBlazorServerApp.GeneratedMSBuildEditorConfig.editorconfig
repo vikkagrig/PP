@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = SimpleBlazorServerApp
+build_property.RootNamespace = SimpleBlazorServerApp
+build_property.ProjectDir = C:\Users\Виктория Григорьева\Desktop\Study\ПП\SimpleBlazorServerApp\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Виктория Григорьева\Desktop\Study\ПП\SimpleBlazorServerApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App2.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwMi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App3.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwMy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App4.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwNC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App5.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwNS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App6.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwNi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App7.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwNy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App8.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwOC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/App9.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwOS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/About.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBYm91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/About2.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBYm91dDIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Contacts.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb250YWN0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Home2.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lMi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Home3.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lMy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Home4.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIb21lNC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Item.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJdGVtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Item2.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJdGVtMi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Item3.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xJdGVtMy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/Main.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNYWluLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/User.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/User2.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyMi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Components/User3.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xVc2VyMy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Shared/MainLayout2.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Виктория Григорьева/Desktop/Study/ПП/SimpleBlazorServerApp/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

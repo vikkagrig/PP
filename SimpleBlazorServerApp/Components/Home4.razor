@@ -1,0 +1,31 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@inject NavigationManager Navigation
+@implements IDisposable
+
+<h2>Home Page</h2>
+<p><a href="/about2">About</a></p>
+<button @onclick="GoToAbout">To About Page</button>
+
+@code {
+    void GoToAbout()
+    {
+        Navigation.NavigateTo("/about2");
+    }
+
+    protected override void OnInitialized()
+    {
+        Navigation.LocationChanged += HandleLocationChanged;
+    }
+
+    private void HandleLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        Console.WriteLine($"URL of new location: {e.Location}");
+    }
+
+    public void Dispose()
+    {
+        Navigation.LocationChanged -= HandleLocationChanged;
+    }
+}

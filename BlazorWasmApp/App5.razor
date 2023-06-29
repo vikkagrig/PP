@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Web
+@implements IDisposable
+
+<EditForm EditContext="editContext" OnSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <p>
+        Name:<br />
+        <InputText id="name" @bind-Value="person.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <InputNumber id="age" @bind-Value="person.Age" />
+    </p>
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code {
+    Person3 person = new();
+    EditContext? editContext;
+    ValidationMessageStore? messageStore;  
+
+    protected override void OnInitialized()
+    {
+        editContext = new(person);
+        messageStore = new(editContext); 
+        editContext.OnValidationStateChanged += HandleValidationRequested;
+    }
+    void HandleValidationRequested(object? sender, ValidationStateChangedEventArgs args)
+    {
+        messageStore?.Clear();  
+        if (person.Name == "admin")
+            messageStore?.Add(() => person.Name!, "Invalid name");
+    }
+    public void Dispose()
+    {
+        if (editContext != null)
+            editContext.OnValidationStateChanged -= HandleValidationRequested;
+    }
+    void Submit()
+    {
+        if (editContext != null && editContext.Validate())
+            Console.WriteLine($"Name: {person.Name} \tAge: {person.Age}");
+        else
+            Console.WriteLine("Data Invalid");
+    }
+}

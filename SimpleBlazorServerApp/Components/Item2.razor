@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<h1>@Title</h1>
+<input @onchange="ChangeValue" value="@search" />
+<h3 style="color:@Color">Time: @DateTime?.ToShortTimeString()</h3>
+
+@code {
+    [CascadingParameter(Name = "Now")]
+    DateTime? DateTime { get; set; }
+    [CascadingParameter(Name = "Color")]
+    string? Color { get; set; }
+    [Parameter]
+    public string Title { get; set; } = "";
+    string? search = "";
+    [Parameter]
+    public string? Search
+    {
+        get { return search; }
+        set { search = value; }
+    }
+
+    [Parameter]
+    public EventCallback<string> SearchChanged { get; set; }
+
+    async Task ChangeValue(ChangeEventArgs e)
+    {
+        search = e?.Value?.ToString();
+        await SearchChanged.InvokeAsync(search);
+    }
+}

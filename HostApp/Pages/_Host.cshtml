@@ -1,0 +1,20 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace HostApp.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <component type="typeof(HeadOutlet)" render-mode="WebAssembly" />
+    <base href="/" />
+</head>
+<body>
+    <component type="typeof(BlazorWasmApp.App6)" render-mode="WebAssembly" />
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+</html>

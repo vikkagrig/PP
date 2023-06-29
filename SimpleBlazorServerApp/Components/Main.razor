@@ -1,0 +1,16 @@
+﻿<div>@Title</div>
+<input id="userAge" @attributes="InputAttributes" />
+<h2 style="color:@Color;">Date: @DateTime?.ToShortDateString()</h2>
+<Time />
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? InputAttributes { get; set; }
+    [CascadingParameter(Name = "Now")]
+    DateTime? DateTime { get; set; }
+    [CascadingParameter(Name = "Color")]
+    string? Color { get; set; }
+}

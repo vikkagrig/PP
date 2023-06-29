@@ -1,0 +1,14 @@
+﻿@inject ITimeService Timer
+
+<h2>Time: @Timer.GetTime()</h2>
+
+@using SimpleBlazorServerApp.Shared
+
+
+<LayoutView Layout="@typeof(MainLayout)">
+    @content
+</LayoutView>
+
+@code {
+    MarkupString content = new MarkupString("<h3>Hello</h3>");
+}

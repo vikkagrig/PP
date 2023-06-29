@@ -1,0 +1,73 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<style>
+#canvas {margin:20px;width:200px; height:200px; background-color:#ccc;}
+</style>
+<div id="canvas" @onclick="Click"></div>
+<div>
+    <p>ClientX: @clientX , ClientY: @clientY</p>
+    <p>OffsetX: @offsetX , OffsetY: @offsetY</p>
+    <p>PageX: @pageX , PageY: @pageY</p>
+    <p>ScreenX: @screenX , ScreenY: @screenY</p>
+</div>
+<h1>Blazor Counter</h1>
+
+<button @onclick="IncrementCount">+</button>
+<span>@currentCount</span>
+<button @onclick="DecrementCount">-</button>
+<button @onclick="@(e => currentCount2++)">+</button>
+<span>@currentCount2</span>
+<button @onclick="@(e => currentCount2--)">-</button>
+<div>
+    <button @onclick="OnIncreaseCallback">+</button>
+    <button @onclick="OnDecreaseCallback">-</button>
+</div>
+<div style="width:100px;height:100px;background-color:#ccc;" @onclick="OnClickCallback">
+</div>
+<div>
+    <input type="text" @bind-value="@item" />
+    <button @onclick="@(async() => await OnClickCallback2.InvokeAsync(item))">Add</button>
+    <button @onclick="@OnClick">Add Item</button>
+</div>
+@code {
+    int currentCount, currentCount2;
+
+    async Task IncrementCount(MouseEventArgs e)
+    {
+        await Task.Delay(500);
+        if (e.CtrlKey == true) currentCount = currentCount + 10;
+        else currentCount++;
+    }
+    async Task DecrementCount()
+    {
+        await Task.Delay(500);
+        if (currentCount > 0) currentCount--;
+    }
+    double clientX, clientY, offsetX, offsetY, pageX, pageY, screenX, screenY;
+
+    void Click(MouseEventArgs e)
+    {
+        clientX = e.ClientX;
+        clientY = e.ClientY;
+        offsetX = e.OffsetX;
+        offsetY = e.OffsetY;
+        pageX = e.PageX;
+        pageY = e.PageY;
+        screenX = e.ScreenX;
+        screenY = e.ScreenY;
+    }
+    [Parameter]
+    public EventCallback OnIncreaseCallback { get; set; }
+    [Parameter]
+    public EventCallback OnDecreaseCallback { get; set; }
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallback { get; set; }
+    string item = "";
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback2 { get; set; }
+    async Task OnClick()
+    {
+        await OnClickCallback2.InvokeAsync(item);
+    }
+}

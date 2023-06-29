@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "pYRHhDcd1gfSPO+pN2QFXqziKWZ19/rcLo88FeDJ8dE=",
+  "Source": "SimpleBlazorServerApp",
+  "BasePath": "_content/SimpleBlazorServerApp",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SimpleBlazorServerApp\\wwwroot",
+      "Source": "SimpleBlazorServerApp",
+      "ContentRoot": "C:\\Users\\Виктория Григорьева\\Desktop\\Study\\ПП\\SimpleBlazorServerApp\\wwwroot\\",
+      "BasePath": "_content/SimpleBlazorServerApp",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Виктория Григорьева\\Desktop\\Study\\ПП\\SimpleBlazorServerApp\\wwwroot\\css\\styles.css",
+      "SourceId": "SimpleBlazorServerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Виктория Григорьева\\Desktop\\Study\\ПП\\SimpleBlazorServerApp\\wwwroot\\",
+      "BasePath": "_content/SimpleBlazorServerApp",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Виктория Григорьева\\Desktop\\Study\\ПП\\SimpleBlazorServerApp\\wwwroot\\images\\photo.jpg",
+      "SourceId": "SimpleBlazorServerApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Виктория Григорьева\\Desktop\\Study\\ПП\\SimpleBlazorServerApp\\wwwroot\\",
+      "BasePath": "_content/SimpleBlazorServerApp",
+      "RelativePath": "images/photo.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\photo.jpg"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+@using SimpleBlazorServerApp.Components
+ 
+<input @bind="@color" />
+<input @bind="@title" />
+<p><button @onclick="Clear">Clear</button></p>
+<ul>
+    @foreach (var item in Found)
+    {
+        <li>@item</li>
+    }
+</ul>
+<CascadingValue Value="@now" Name="Now">
+    <CascadingValue Value="@color" Name="Color">
+        <Main />
+        <Item2 Title="@title" @bind-Search="text" />
+    </CascadingValue>
+</CascadingValue>
+ 
+@code {
+    string title = "Hello";
+    string text = "C"; 
+    List<string> database = new() { "C#", "C++", "JavaScript", "Java", "Python" };
+    List<string> Found
+    {
+        get { return database.Where(name => name.Contains(text)).ToList(); }
+    }
+    void Clear() => text = "";
+    DateTime now = DateTime.Now;
+    string color = "navy";
+}

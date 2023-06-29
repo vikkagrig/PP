@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using SimpleBlazorServerApp.Components
+
+<h2>Count: @count</h2>
+<!--Item OnIncreaseCallback="Increase" OnDecreaseCallback="Decrease" OnClickCallback="@GetCoords" OnClickCallback2="@AddNewUser" /-->
+
+<div>@coords</div>
+<ul>
+    @foreach (var user in users)
+    {
+        <li>@user</li>
+    }
+</ul>
+<div>
+    <input @bind="@item" @bind:event="oninput" />
+    <p>Value: @item</p>
+</div>
+<p>
+    <input @bind-value="divStyle" @bind-value:event="oninput" style="width:300px;" />
+</p>
+<div style="@divStyle"></div>
+<div>
+    <input @bind-value="number" @bind-value:event="oninput" />
+    <p>@number</p>
+</div>
+<input @bind="searchText" @bind:after="PerformSearch" />
+<ul>
+    @foreach (var item in found)
+    {
+        <li>@item</li>
+    }
+</ul>
+<input type="number" @bind:get="age" @bind:set="SetAge" />
+<h2>Age: @age</h2>
+<input type="number" @bind="Age" />
+<h2>Age: @Age</h2>
+@code {
+    int count;
+    void Increase() => count++;
+    void Decrease() => count--;
+    string coords = "";
+
+    void GetCoords(MouseEventArgs e)
+    {
+        coords = $"Coords X = {e.ClientX}  Y= {e.ClientY}";
+    }
+    List<string> users = new List<string>();
+
+    void AddNewUser(string user)
+    {
+        users.Add(user);
+    }
+    string item = "hello";
+    string divStyle = "background-color:blue;width:100px;height:100px;";
+    double number = 23.8;
+    List<string> items = new() { "Tom", "Sam", "Bob", "Kate", "Alice", "Tomas" };
+    List<string> found = new();
+    string searchText = "";
+    async Task PerformSearch()
+    {
+        await Task.Delay(400);
+        found = items.Where(item => item.Contains(searchText)).ToList();
+    }
+    int age = 18;
+    void SetAge(int value)
+    {
+        if (value > 0 && value < 110) age = value;
+    }
+    int Age
+    {
+        get { return age; }
+        set
+        {
+            if (value > 0 && value < 110) age = value;
+        }
+    }
+}

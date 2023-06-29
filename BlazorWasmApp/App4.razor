@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Web
+
+<EditForm Model="@person" OnSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <p>
+        Name:<br />
+        <InputText id="name" @bind-Value="person.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <InputNumber id="age" @bind-Value="person.Age" ParsingErrorMessage="Введите число" />
+    </p>
+    <button type="submit">Submit</button>
+</EditForm>
+
+@code {
+    Person2 person = new();
+    void Submit()
+    {
+        Console.WriteLine($"Name: {person.Name} \tAge: {person.Age}");
+    }
+}
